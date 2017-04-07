@@ -72,12 +72,12 @@ export class HomeComponent implements AfterViewInit {
 
   render() {
 
-    this.cube.rotation.y += 0.01; //TODO: figure out if we can read getters from Animations API here
+    this.cube.rotation.y += 0.01; //TODO: Figure out if we can read state from Animations API here in 4.1
 
     this.glRenderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
     this.glRenderer.render(this.scene, this.camera);
 
-    requestAnimationFrame(() => this.render());
+    requestAnimationFrame(() => this.render()); // TODO: Is this best practice or should we get frames from Animations API?
 
   }
 
