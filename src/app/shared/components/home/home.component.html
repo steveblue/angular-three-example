@@ -1,0 +1,7 @@
+<img [@intro]="animationState"
+     src="/assets/ng2-stealth.png"
+     class="app__icon"
+     [ngClass]="{'is--active' : animationState === 'active',
+                 'is--inactive' : animationState === 'inactive'}">
+
+<canvas #canvas></canvas>
